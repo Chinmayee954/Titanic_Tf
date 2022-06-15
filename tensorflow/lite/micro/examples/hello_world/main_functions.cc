@@ -91,8 +91,8 @@ void loop() {
 
 output = interpreter->output(0);
 
-//float not_survived_score = output->data.f[notsurvived];
-//float survived_score = output->data.f[survived];
+// float not_survived_score = output->data.f[notsurvived];
+// float survived_score = output->data.f[survived];
 
 HandleOutput(error_reporter, output->dims->size, input->dims->size);
 

@@ -44,18 +44,13 @@ TF_LITE_MICRO_TEST(LoadModelAndPerformInference) {
 
   // Make sure the input has the properties we expect
   TF_LITE_MICRO_EXPECT_NE(nullptr, input);
- 
   TF_LITE_MICRO_EXPECT_EQ(2, input->dims->size);
-  // The value of each element gives the length of the corresponding tensor.
-  // We should expect two single element tensors (one is contained within the
-  // other).
   TF_LITE_MICRO_EXPECT_EQ(1, input->dims->data[0]);
   TF_LITE_MICRO_EXPECT_EQ(10, input->dims->data[1]);
-  // The input is an 8 bit integer value
   TF_LITE_MICRO_EXPECT_EQ(kTfLiteFloat32, input->type);
 
-  // Get the input quantization parameters
- std::vector<float> arr = {3.0,  0.0,     1.0,   0.0,  0.0,  0.0,     0.0,     3.0,       3.0,      1.0};
+// Here I have to manually enter the test case
+ std::vector<float> arr = {3.0,  0.0, 1.0,   0.0,  0.0,  0.0,     0.0,     3.0,       3.0,      1.0};
 
 
   
@@ -90,11 +85,6 @@ TF_LITE_MICRO_EXPECT_EQ(2, output->dims->size);
   TF_LITE_MICRO_EXPECT_EQ(1, output->dims->data[0]);
   TF_LITE_MICRO_EXPECT_EQ(1, output->dims->data[1]);
   TF_LITE_MICRO_EXPECT_EQ(kTfLiteFloat32, output->type);
-
-   
-
-
-  
 
 
 
