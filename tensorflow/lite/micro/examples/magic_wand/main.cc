@@ -21,7 +21,8 @@ limitations under the License.
 // this main.cc file in a target-specific subfolder.
 int main(int argc, char* argv[]) {
   setup();
-  while (true) {
+  int t=10;
+  while (t--) {
     loop();
   }
 }

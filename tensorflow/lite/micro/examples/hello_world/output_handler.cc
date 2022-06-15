@@ -15,10 +15,10 @@ limitations under the License.
 
 #include "tensorflow/lite/micro/examples/hello_world/output_handler.h"
 
-void HandleOutput(tflite::ErrorReporter* error_reporter, float x_value,
-                  float y_value) {
+void HandleOutput(tflite::ErrorReporter* error_reporter, float not_survived,
+                  float survived) {
   // Log the current X and Y values
-  TF_LITE_REPORT_ERROR(error_reporter, "x_value: %f, y_value: %f\n",
-                       static_cast<double>(x_value),
-                       static_cast<double>(y_value));
+  TF_LITE_REPORT_ERROR(error_reporter, "not_survived: %f, survived: %f\n",
+                       static_cast<double>(not_survived),
+                       static_cast<double>(survived));
 }
