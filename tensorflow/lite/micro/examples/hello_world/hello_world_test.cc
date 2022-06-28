@@ -66,7 +66,7 @@ std::string line, word;
 // Here I have to manually enter the test case
  //std::vector<float> arr = {3.0,  0.0, 1.0,   0.0,  0.0,  0.0,     0.0,     3.0,       3.0,      1.0};
 
-    std::fstream file1("/home/chinmayee/Desktop/samsung_projects/Titanic_Tf/tensorflow/lite/micro/examples/hello_world/pred.csv", std::ios::in);
+    std::fstream file1("tensorflow/lite/micro/examples/hello_world/pred.csv", std::ios::in);
     if(file1.is_open())
     {
         getline(file1,line);
@@ -82,7 +82,7 @@ std::string line, word;
     else
     std::cout<<"Could not open the file\n";
 
-    std::fstream file2("/home/chinmayee/Desktop/samsung_projects/Titanic_Tf/tensorflow/lite/micro/examples/hello_world/x_test.csv", std::ios::in);
+    std::fstream file2("tensorflow/lite/micro/examples/hello_world/x_test.csv", std::ios::in);
     if(file2.is_open())
     {
         getline(file2,line);
